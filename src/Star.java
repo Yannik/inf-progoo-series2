@@ -5,9 +5,8 @@ public class Star extends GraphicsProgram {
 
     public void run() {
         int points = readInt("Points: ");
-        int pointRadius = readInt("Point radius: ");
+        int outerRadius = readInt("Point radius: ");
         int innerRadius = readInt("Inner radius: ");
-        int outerRadius = innerRadius + pointRadius;
 
         double totalDegrees = 360;
         double degreesPerSide = totalDegrees / points;
@@ -26,7 +25,6 @@ public class Star extends GraphicsProgram {
             double y2 = Math.sin(endDegree / 180 * Math.PI) * innerRadius + yOffset;
             add(new GLine(x0, y0, x1, y1));
             add(new GLine(x1, y1, x2, y2));
-            println("Degree: " + startDegree + " endDegree: " + endDegree + " x0: " + x0 + " y0: " + y0 + " x1: " + x1 + " y1: " + y1);
 
         }
     }
